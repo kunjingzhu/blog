@@ -1,0 +1,101 @@
+# ============================================================
+# 老朱个人博客 · Hugo + PaperMod 骨架
+# 2026-10-20 生成 | 预览: hugo server -D（hugo 已入用户 PATH）
+# 构建: hugo --minify  →  public/ 目录
+# ============================================================
+
+baseURL = "https://blog.zjkun.top/"
+title = "老朱的赛博工位"          # 10/20 主人拍板：暂定用这个
+theme = "PaperMod"
+defaultContentLanguage = "zh-cn"
+locale = "zh-CN"
+hasCJKLanguage = true
+timeZone = "Asia/Shanghai"
+enableRobotsTXT = true
+enableEmoji = true
+
+[pagination]
+  pagerSize = 8
+
+[permalinks]
+  posts = "/posts/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]   # JSON 供站内搜索使用
+
+[menus]
+  [[menus.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menus.main]]
+    name = "分类"
+    url = "/categories/"
+    weight = 20
+  [[menus.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 30
+  [[menus.main]]
+    name = "归档"
+    url = "/archives/"
+    weight = 40
+  [[menus.main]]
+    name = "搜索"
+    url = "/search/"
+    weight = 50
+  [[menus.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 60
+
+[params]
+  env = "production"
+  description = "朱景坤的个人博客：AI 应用与 RAG 实战、全栈开发踩坑、3D 打印跨境实操记录"
+  keywords = ["AI应用", "RAG", "全栈开发", "Hugo", "3D打印", "跨境电商", "求职"]
+  author = "老朱"
+  mainSections = ["posts"]
+
+  # ---- 功能开关 ----
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowFullTextinRSS = true
+  showtoc = true
+  tocopen = false
+  comments = false        # ← 评论总开关：MySQL 容器就绪接 Artalk 时改 true
+  disableHLJS = true
+
+  [params.label]
+    text = "老朱"
+
+  [params.homeInfoParams]
+    Title = "你好，我是老朱 👋"
+    Content = """12 年开发经验、前端为主的全栈。这里记录 AI 应用/RAG 实战、踩坑复盘和 3D 打印跨境实操。欢迎光临，常来。"""
+
+  # 首页/profile 模式开关（想用纯介绍页首页时把 profileMode.enabled 改 true）
+  [params.profileMode]
+    enabled = false
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    minMatchCharLength = 1
+    keys = ["title", "summary", "content"]
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
