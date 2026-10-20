@@ -7,7 +7,7 @@
 baseURL = "https://blog.zjkun.top/"
 title = "老朱的赛博工位"          # 10/20 主人拍板：暂定用这个
 theme = "PaperMod"
-defaultContentLanguage = "zh-cn"
+defaultContentLanguage = "zh"   # 10/20 改：主题 i18n 只有 zh.yaml（无 zh-cn），原 zh-cn 导致 read_time 回退成英文 "min"
 locale = "zh-CN"
 hasCJKLanguage = true
 timeZone = "Asia/Shanghai"
@@ -72,6 +72,7 @@ enableEmoji = true
   tocopen = false
   comments = false        # ← 评论总开关：MySQL 容器就绪接 Artalk 时改 true
   disableHLJS = true
+  DateFormat = "2006-01-02"   # 文章 meta 日期统一 YYYY-MM-DD（10/20 主人钦定）
 
   [params.label]
     text = "老朱"
