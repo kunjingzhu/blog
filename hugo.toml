@@ -27,31 +27,41 @@ enableEmoji = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]   # JSON 供站内搜索使用
 
+# 10/21 栏目结构定案（主人钦定四栏目）：AI应用开发 / 全栈与部署 / 3D打印跨境 / 求职手记
+# 分类英文 slug 稳定 URL，中文显示名由 content/categories/<slug>/_index.md 提供
 [menus]
   [[menus.main]]
     name = "文章"
     url = "/posts/"
     weight = 10
   [[menus.main]]
-    name = "分类"
-    url = "/categories/"
+    name = "AI应用开发"
+    url = "/categories/ai-app/"
     weight = 20
   [[menus.main]]
-    name = "标签"
-    url = "/tags/"
+    name = "全栈与部署"
+    url = "/categories/fullstack-deploy/"
     weight = 30
+  [[menus.main]]
+    name = "3D打印跨境"
+    url = "/categories/3d-printing/"
+    weight = 40
+  [[menus.main]]
+    name = "求职手记"
+    url = "/categories/job-notes/"
+    weight = 50
   [[menus.main]]
     name = "归档"
     url = "/archives/"
-    weight = 40
+    weight = 60
   [[menus.main]]
     name = "搜索"
     url = "/search/"
-    weight = 50
+    weight = 70
   [[menus.main]]
     name = "关于"
     url = "/about/"
-    weight = 60
+    weight = 80
 
 [params]
   env = "production"
