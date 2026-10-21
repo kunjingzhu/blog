@@ -6,3 +6,6 @@ hugo_stats.json
 # 内容文档（文章/页面正文）不上传 GitHub，仅本地保留
 content/*
 !content/.gitkeep
+
+favicon_candidates/
+blog_dist.tar.gz
